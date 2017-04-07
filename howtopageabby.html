@@ -1,0 +1,172 @@
+<html>
+
+<head>
+    <title> How To Abby </title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <link href="titlepage.html" rel="stylesheet">
+    <style>
+        p {
+            font-size: 18px;
+            font-family: 'Baloo Bhaina', cursive;
+            margin: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        #navbar {
+            font-size: 20px;
+            font-family: 'Baloo Bhaina', cursive;
+            margin: 50px;
+        }
+        
+        #navbar li {
+            display: inline-block;
+            padding: 0px 15px;
+        }
+        
+        #navbar li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        body {
+            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/78/b1/96/78b1965dbb8d754bbeb6f9a1addf0d4f.jpg");
+        }
+        
+        #NextButton {
+            color: blue;
+            font-family: 'Baloo Bhaina', cursive;
+            font-size: 50px;
+            text-decoration: none;
+        }
+        
+        #NextButton:hover {
+            color: purple;
+        }
+        
+        #NextButton {
+            text-align: center;
+        }
+        
+        .question {
+            display:none;
+        }
+        
+    #ResultsButton {
+           display: none;
+           text-align: center;
+            margin-left: 500px;
+        }
+        .button {
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 35px;
+            font-family: 'Baloo Bhaina', cursive;
+        }
+        .button:hover {
+            color: purple;
+        }
+        .displayAnswersClass{
+            z-index:5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="navbar" style="display: inline-block; text-align: center ">
+        <li> <a href="titlepage.html"> Home </a></li>
+        <li> <a href="questionpage.html"> Questions </a></li>
+        <li> <a href="howtopagekaren.html"> How To By Karen Roblero</a></li>
+        <li> <a href="howtopageabby.html"> How To By Abby Wagner</a></li>
+        
+        <h1> How To Rotate The Information Seen On The Page </h1>
+        <h2> By Abby S Wagner</h2>
+        <img src="screenshot.png" width=" 800px" float="center">
+        
+        <div>
+            <h2>The Intent/How To Make Things Disappear</h2>
+            <p>With our fortune telling questions, the html page displaying the questions was very long. Because you
+            can only link one html page to one javascript page, we couldn't divide the questions onto different pages - not
+            literally. However, we could make it look like different pages for the user; that is, we could make different
+            sections disappear and reappear with the click of a button.</p>
+            <p>The first thing we did was in the html page holding the questions was make all the questions hidden. Using CSS
+            in the head of the page, we made it so all parts with the .question id would display none. This means that the user
+            will not be able to see them, and, most importantly, they wouldn't take up space. This differes from the visibility
+            feature which, when marked hidden, makes things invisible as well except this feature will make it still take up 
+            space. We used the display feature because we wanted there to not be empty spaces in the page the users viewed.</p>
+            <img src="screenshot2.png" width=" 400px">
+            
+            <h2>The Bodacious Button</h2>
+            <img src="screenshot3.png" width=" 340px">
+            <p> We also needed a button. Explained more later, but in our HTML page, we added a next button as a way to start 
+            a function, which, in this case, would be used by the user to say they were done with one section and ready
+            to start the next.</p>
+        </div>
+        
+        <div>
+        <h2>The Divs</h2>
+        <p>Another necessary part of creating a way to rotate information is divs. We used divs in two ways. The first was very 
+        straight forward. We put the question and the image we wanted displayed together in one div. A div is mainly a storage
+        spot for information.Using divs like this just guaranteed that certain objects on the page would stay together. 
+        Additionally, in each div we set the id for "questionx" with x being the question number, and we set the class to 
+        "question". This will come into play later.</p>
+        <img src="screenshotdivs5.png" width=" 400px">
+        <p>The second use for divs is responsible for what is and isn't visible. We only wanted three questions to be shown 
+        at one time, so we created three divs. In theory, these would be what the user would see, or three slots. We then set 
+        the three divs to have the ids "currentQuestionOne", "curentQuestionTwo", and "currentQuestionThree". After this, 
+        we were ready to start the portion of the work that would be in javascript.</p>
+        <img src="screenshotdivs4.png" width=" 560px">
+        </div>
+        
+        <div>
+            <h2>The Javascript</h2>
+            <p>Within our javascript page (after linking it to the html page and defining some variables) we started our
+            function that would put questions in the current question divs and display them. The first thing we did was
+            set var num as 0 with a simple equation saying which. The purpose of this was just so we could start off at zero
+            and slowly add the next three questions with the click of the next button. Had we set it as 1, we would be off and 
+            question1 would never be displayed.</p>
+            <p>Second, we started our function by using a DOM element (document.getElementById) to take a variable from the HTML
+            page and use it in our javascript page, the variable being the nextQuestionButton. Then, we added an addEventListener, 
+            which basically tells the computer to "listen" for a click of, in this case, the nextQuestionButton. Then, we started the 
+            function.</p>
+            <p> On the next line it uses the DOM element yet again to use the questions in the HTML page, except plus num. This basically says it will get the 
+            question that corrsponds with the number, as all are called "question1, question2, question3,...". Then it changes the CSS 
+            by adding ".style.display = block" which undoes the CSS hiding it on the HTML page. We did that for all three divs, which
+            rotates which questions are shown.</p>
+            <p> In addition to this, we needed to hide the previous set of questions displayed. In order to do this, we set an 
+            if statement with the condition that num is greater than three. Then, we set the question (num -3) to be display none 
+            so that it would eliminate the question that was in the div before it.</p>
+        </div>
+       <img src="javascriptscreenshot1.png" width=" 600px">
+        
+        <div>
+            <h2> Unlucky Number 13: The Exception </h2>
+            <p>We couldn't leave it as is because we had thirteen questions, which means there was one that didn't match the rest.
+            On its own, when getting to the last page, it would display Question 13 again along with questions 11 and 12. 
+            In order to fix that, we added if statements.<p>
+            <p>Our just said that when we got to Question 12 and we pressed the Next button, it would change the CSS of 
+            of Question 13 to display block, but it would keep the other questions as display none. We did this by using the DOM 
+            for each individual question and putting ".style.display" and setting it to either block or none, like earlier.</p>
+            <img src="quest13uno.png" width=" 470px">
+            <p></p>
+            <img src="screenshot.png" width=" 570px">
+        </div>
+        
+        
+</body>

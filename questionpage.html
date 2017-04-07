@@ -1,0 +1,395 @@
+<html>
+
+<head>
+    <title> Questions</title>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
+    <link href="titlepage.html" rel="stylesheet">
+    <style>
+        p {
+            font-size: 18px;
+            font-family: 'Baloo Bhaina', cursive;
+            margin: 50px;
+            text-align: center;
+            color: black;
+        }
+        
+        #navbar {
+            font-size: 20px;
+            font-family: 'Baloo Bhaina', cursive;
+            margin: 50px;
+        }
+        
+        #navbar li {
+            display: inline-block;
+            padding: 0px 15px;
+        }
+        
+        #navbar li a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        h2 {
+            font-size: 22px;
+            margin: 50px;
+            text-align: center;
+            color: white;
+        }
+        
+        body {
+            background-image: url("https://s-media-cache-ak0.pinimg.com/736x/78/b1/96/78b1965dbb8d754bbeb6f9a1addf0d4f.jpg");
+        }
+        
+        #NextButton {
+            color: blue;
+            font-family: 'Baloo Bhaina', cursive;
+            font-size: 50px;
+            text-decoration: none;
+        }
+        
+        #NextButton:hover {
+            color: purple;
+        }
+        
+        #NextButton {
+            text-align: center;
+        }
+        
+        .question {
+            display:none;
+        }
+        
+    #ResultsButton {
+           display: none;
+           text-align: center;
+            margin-left: 500px;
+        }
+        .button {
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 35px;
+            font-family: 'Baloo Bhaina', cursive;
+        }
+        .button:hover {
+            color: purple;
+        }
+        .displayAnswersClass{
+            z-index:5;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul id="navbar" style="display: inline-block; text-align: center ">
+        <li> <a href="titlepage.html"> Home </a></li>
+        <li> <a href="questionpage.html"> Questions </a></li>
+        <li> <a href="howtopagekaren.html"> How To By Karen Roblero</a></li>
+        <li> <a href="howtopageabby.html"> How To By Abby Wagner</a></li>
+        <h1 style="text-align: center; font-family: 'Baloo Bhaina', cursive;"> Please answer the following questions to reveal your future endeavors. </h1>
+
+<!-- Here we have three empty divs; these will hold the segments/questions of the page seen at one time -->
+        <div id="currentQuestionOne">
+
+        </div>
+        <div id="currentQuestionTwo">
+
+        </div>
+        <div id="currentQuestionThree">
+
+        </div>
+
+
+
+<!-- Here we have a div around each question; this is basically parts of the page we want to stay together -->
+        <div id="question1" class="question">
+            <div style="margin-left: -400px;">
+                <!-- This is the first question, which is an input box, so the user will insert written information insteda of a multiple choice style drop down -->
+                <h2> 1. What is the third letter in your first name? </h2>
+                <input type="text" id="questiononeinput"><br>
+            </div>
+        </div>
+
+
+        <div id="question2" class="question">
+            <div style="margin-left: -400px">
+                <!-- This question is multiple choice, so we have a select with different values for the user to choose-->
+                <h2>2. Are you Team Apple or Team Samsung? </h2>
+                <select id="question2select">
+                    <option value="#"></option>
+                <option value="apple" >Team Apple</option>
+                <option value="samsung" >Team Samsung</option>
+            </select>
+            </div>
+            <!-- This is our first image. We put it in a div inside a div so that it could be moved seperately from the question, but would still be displayed with it when the time came -->
+            <div style="margin-left: 650px; margin-top: -240px">
+                <img src="http://forumfoundrycdn.com/dgstorm/df2016/apple-vs-samsung-battle-bots-supreme-court.png" width=" 400px">
+            </div>
+
+        </div>
+
+
+        <div id="question3" class="question">
+            <div style="margin-left: -400px">
+            <h2>3. Which one of the following Disney movies do you prefer? </h2>
+            <select id="question3select">
+                <option value="#"></option>
+                <option value="pooh" >The Adventures of Winnie the Pooh</option>
+                <option value="aladdin" >Aladdin</option>
+                <option value="pinocchio" >Pinocchio</option>
+                <option value="bambi" >Bambi</option>
+            </select>
+            </div>
+            <div style="margin-left: 650px; margin-top: -100px">
+                <img src="poohbear.jpg" width=" 400px">
+            </div>
+        </div>
+
+
+        <div id="question4" class="question">
+            <div style=" margin-right: -250px">
+            <h2>4. Who should die next on the Walking Dead? </h2>
+            <select id="question4select">
+                <option value="#"></option>
+                <option value="carl" >Carl</option>
+                <option value="eugene" >Eugene</option>
+                <option value="carol" >Carol</option>
+                <option value="gabriel" >Gabriel</option>
+            </select>
+            </div>
+            <div style="margin-right: 550px; margin-top: -100px">
+            <img src="carl.jpg" width=" 250px">
+            </div>
+        </div>
+
+
+        <div id="question5" class="question">
+            <div style="margin-right: -250px; margin-top: -100px">
+            <h2>5. If Satan had a last name, what would it be?</h2>
+            <select id="question5select">
+                <option value="#"></option>
+                <option value="kardashian" >Kardashian</option>
+                <option value="trump" >Trump</option>
+                <option value="lujan" >Lujan</option>
+                <option value="ramos" >Ramos</option>
+            </select>
+            </div>
+        </div>
+
+        <div id="question6" class="question">
+            <div style="margin-left: -280px">
+            <h2>6. Who is your favorite Winnie the Pooh character? </h2>
+            <select id="question6select">
+                <option value="#"></option>
+                <option value="pooh" >Pooh</option>
+                <option value="piglet" >Piglet</option>
+                <option value="roo" >Roo</option>
+                <option value="christopherrobin" >Christopher Robin</option>
+                </select>
+                </div>
+                <div style="margin-right: -800; margin-top: -180px">
+            <img src="http://hipnewjersey.com/wp-content/uploads/2017/01/maxresdefault.jpg" width="400px">
+            </div>
+        </div>
+
+
+
+
+        <div id="question7" class="question">
+            <div style="margin-top: -30px">
+            <h2>7. If you had to (or got the opportunity to) sacrifice one Sesame Street character, <br> who would you choose?</h2>
+            <select id="question7select">
+                <option value="#"></option>
+                <option value="elmo" >Elmo</option>
+                <option value="bigbird" >Big Bird</option>
+                <option value="abby" >Abby Cadabby</option>
+                <option value="ernie" >Ernie</option>
+            </select>
+            </div>
+            <div style= "float: left; margin-top: -100px">
+                <img src="https://media.giphy.com/media/umMYB9u0rpJyE/giphy.gif" width=" 400px">
+            </div>
+        </div>
+
+        <div id="question8" class="question">
+            <div  style="margin-left: -80px">
+            <h2>8. What is your favorite type of pie? </h2>
+            <select id="question8select">
+                <option value="#"></option>
+                <option value="apple" >apple pie</option>
+                <option value="pumpkin" >pumpkin pie</option>
+                <option value="pi" >3.14</option>
+                <option value="pot" >chicken pot pie</option>
+            </select>
+            </div>
+        </div>
+
+        <div id="question9" class="question">
+            <div style="margin-top: -50px">
+            <h2>9. What should the next Kardashian baby be called? </h2>
+            <select id="question9select">
+                <option value="#"></option>
+                <option value="south" >South</option>
+                <option value="kanno" >Kan-no</option>
+                <option value="sinner" >Sinner</option>
+                <option value="joe" >Joe</option>
+                </select>
+                </div>
+        </div>
+
+
+
+        <div id="question10" class="question">
+            <div style="margin-right: 200px">
+            <h2>10. Which of the following songs will be played at your funeral?</h2>
+            <select id="question10select">
+                <option value="#"></option>
+                <option value="highwaytohell" >Highway To Hell by ACDC</option>
+                <option value="fu" >F&*# You by Cee Lo Green</option>
+                <option value="dingdong" >Ding Dong The Witch Is Dead by the cast of the Wizard of Oz</option>
+                <option value="kahoot1" >The Kahoot Soundtrack: 10 Hour Edition</option>
+            </select>
+            </div>
+            <div style="float: right; margin-top: -40px">
+                <img src="http://vignette2.wikia.nocookie.net/walkingdead/images/d/d1/Superhero-funeral-o.gif/revision/latest?cb=20150713184333" width=" 450px">
+            </div>
+        </div>
+
+
+        <div id="question11" class="question">
+            <h2>11. What is the meaning of life? </h2>
+            <select id="question11select">
+                <option value="#"></option>
+                <option value="happiness" >Happiness</option>
+                <option value="compassion" >Compassion</option>
+                <option value="jesus" >The words of Jesus Christ</option>
+                <option value="kahoot2" >Winning Kahoot</option>
+            </select>
+        </div>
+
+        <div id="question12" class="question">
+            <div style="margin-right: 390px">
+            <h2>12. Who is your favorite Chris? </h2>
+            <select id="question12select">
+                <option value="#"></option>
+                <option value="pratt" >Chris Pratt</option>
+                <option value="hemsworth" >Chris Hemsworth</option>
+                <option value="evans" >Chris Evans</option>
+                <option value="brown" >Chris Brown</option>
+                </select>
+                </div>
+        </div>
+
+        <div id="question13" class="question">
+            <div style="float: center">
+            <h2>13. Is 13 an unlucky number? </h2>
+            <select id="question13select">
+                <option value="#"></option>
+                <option value="yes" >Yes</option>
+                <option value="no" >No</option>
+            </select>
+            </div>
+            <div style="float: center">
+                <p></p>
+                <img src="https://media.giphy.com/media/cyfNrUAOxBkgE/giphy.gif" width=" 400px">
+            </div>
+            <h1> Click the results button to see your fate. </h1>
+        </div>
+<!-- Here is where we create two very important buttons: the nextQuestionButton and the ResultsButton. These buttons will be used later to start different functions. -->
+        <button id="nextQuestionButton" class="button"> Next </button>
+        <button id="ResultsButton" class="button"> Results </button>
+
+
+
+
+
+
+
+
+
+<!-- To display the eventual output, we put empty divs corrosponding with each question's answer so that this data could be placed here from the javascipt page with the DOM element -->
+        <div id="answer1" class = "displayAnswersClass">
+
+        </div>
+
+
+
+        <div id="answer2" class = "displayAnswersClass">
+
+        </div>
+
+
+
+        <div id="answer3">
+
+        </div>
+
+
+
+        <div id="answer4">
+
+        </div>
+
+
+
+        <div id="answer5">
+
+        </div>
+
+
+        <div id="answer6">
+
+        </div>
+
+
+
+
+        <div id="answer7">
+
+        </div>
+
+
+        <div id="answer8">
+
+        </div>
+
+
+        <div id="answer9">
+
+        </div>
+
+
+        <div id="answer10">
+
+        </div>
+
+
+        <div id="answer11">
+
+        </div>
+
+
+        <div id="answer12">
+
+        </div>
+
+
+        <div id="answer13">
+
+        </div>` `
+
+
+
+</body>
+<!-- Here is where we link the html page to the javascipt page -->
+<script src="futuretelling.js"></script>
+
+</html>
